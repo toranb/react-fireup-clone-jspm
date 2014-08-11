@@ -15,6 +15,7 @@ var Tables = React.createClass({
       <div className="row">
         <div className="twelve columns">
           <h1>Ordr</h1>
+          <Link to="prereports" className="right">reports</Link>
           <hr />
           <p>
             <div className="row">
