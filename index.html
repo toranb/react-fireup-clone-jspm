@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+ <script src="jspm_packages/system@0.6.js"></script>
+ <script src='config.js'></script>
+ <script src="build.js"></script>
+ <script>
+    var pizza = {id: 1, cost: 5, name: "Pizza", image_url: "/img/pizza.png"};
+    var pancakes = {id: 2, cost: 6, name: "Pancakes", image_url: "/img/pancakes.png"};
+    var fries = {id: 3, cost: 7, name: "Fries", image_url: "/img/fries.png"};
+    var hotdog = {id: 4, cost: 8, name: "Hotdog", image_url: "/img/hotdog.png"};
+    var foods = [pizza, pancakes, fries, hotdog];
+
+    var one = {id: 1, name: "first", foods: []};
+    var two = {id: 2, name: "second", foods: []};
+    var three = {id: 3, name: "third", foods: []};
+    var four = {id: 4, name: "fourth", foods: []};
+    var five = {id: 5, name: "fifth", foods: []};
+    var six = {id: 6, name: "sixth", foods: []};
+    var models = [one, two, three, four, five, six];
+
+    System.import('build/router').then(function(router) {
+       router['default'].renderComponent(document.body);
+     }).catch(function(e) {
+       console.log(e);
+     });
+  </script>
+</body>
+</html>
